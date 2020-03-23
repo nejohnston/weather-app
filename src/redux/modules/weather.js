@@ -6,16 +6,16 @@ const GET_LOCATIONS = 'GET_LOCATIONS';
 // application to your store. They are the only source of information
 // for the store. You send them to the store using store.dispatch().
 
-export const getLocations = (tag) => ({
+export const getLocations = (locationList) => ({
   type: GET_LOCATIONS,
-  payload: tag
+  payload: locationList
 });
 
 // REDUCER
 
 export default (
   state = {
-    locations: [
+    locationList: [
       'Creston',
       'Dease Lake',
       'Fort Nelson',
@@ -29,7 +29,7 @@ export default (
 ) => {
   switch (action.type) {
     case GET_LOCATIONS: {
-      return { ...state, locations: action.payload };
+      return { ...state, locationList: action.payload };
     }
     default:
       return state;

@@ -5,18 +5,18 @@ import Location from './Location';
 
 class LocationContainer extends Component {
   PropTypes = {
-    locations: PropTypes.array
+    locationList: PropTypes.array
   };
   render() {
-    const { locations } = this.props.data;
+    // const { locationList } = this.props.data;
     return (
       <div>
-        <Location locations={locations} />
+        <Location locationList={this.props.locationList} />
       </div>
     );
   }
 }
 const mapStateToProps = (state) => ({
-  locations: state.location.locations
+  locationList: state.weather.locationList
 });
 export default connect(mapStateToProps)(LocationContainer);

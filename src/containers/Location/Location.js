@@ -1,9 +1,9 @@
 import React from 'react';
 import DropDownMenu from '../../components/dropDownMenu';
 
-const Location = ({ locations }) => (
+const Location = ({ locationList }) => (
   <div>
-    <DropDownMenu locations={locations} />
+    <DropDownMenu locationList={locationList} />
   </div>
 );
 

@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import locationReducer from './modules/location';
+import weatherReducer from './modules/weather';
 
 export default combineReducers({
-  location: locationReducer
+  weather: weatherReducer
 });
