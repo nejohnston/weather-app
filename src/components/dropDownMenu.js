@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const DropDownMenu = () => {
+const DropDownMenu = ({ locations }) => {
   const classes = useStyles();
   const [ age, setAge ] = React.useState('');
 
@@ -33,6 +33,11 @@ const DropDownMenu = () => {
           value={age}
           onChange={handleChange}
         >
+          {locations.map((location) => (
+            <div>
+              <MenuItem value={10}>{location}</MenuItem>
+            </div>
+          ))}
           <MenuItem value={10}>Dease Lake</MenuItem>
           <MenuItem value={10}>Fort Nelson</MenuItem>
           <MenuItem value={10}>Terrace</MenuItem>
