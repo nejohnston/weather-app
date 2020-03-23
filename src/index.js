@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
+const sSweather = () => (
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>
+);
+ReactDOM.render(
+  <React>
+    <App />
+    <script src='//weather.gc.ca/wxlink/site_js/s0000409_e.js' />
+    <script type='text/javascript' src='js/wxlink.js' />
+  </React>,
   document.getElementById('root')
 );
 
