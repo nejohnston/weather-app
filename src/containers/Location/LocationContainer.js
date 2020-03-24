@@ -7,16 +7,20 @@ class LocationContainer extends Component {
   PropTypes = {
     locationList: PropTypes.array
   };
-  componentWillMount() {}
   render() {
     return (
       <div>
-        <Location locationList={this.props.locationList} />
+        <Location
+          locationList={this.props.locationList}
+          selectedLocation={this.props.selectedLocation}
+        />
       </div>
     );
   }
 }
 const mapStateToProps = (state) => ({
-  locationList: state.weather.locationList
+  locationList: state.weather.locationList,
+  selectedLocation: state.weather.selectedLocation
 });
+
 export default connect(mapStateToProps)(LocationContainer);

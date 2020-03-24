@@ -1,4 +1,4 @@
-import weather from '../weather.js';
+import weather from '../config.js';
 
 // ACTIONS
 const GET_LOCATIONS = 'GET_LOCATIONS';
