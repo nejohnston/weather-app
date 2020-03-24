@@ -14,9 +14,7 @@ export const getSelectedLocation = (selectedLocation) => ({
   payload: selectedLocation
 });
 
-// const locationList = ({ config }) => ();
-
-export const getLocations = () => ({
+export const getLocations = (weather) => ({
   type: GET_LOCATIONS,
   payload: weather
 });
@@ -33,6 +31,9 @@ export default (
   switch (action.type) {
     case GET_LOCATIONS: {
       return { ...state, locationList: action.payload };
+    }
+    case GET_SELECTED_LOCATION: {
+      return { ...state, selectedLocation: action.payload };
     }
     default:
       return state;

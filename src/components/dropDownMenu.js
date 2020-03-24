@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
@@ -14,12 +15,14 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const DropDownMenu = ({ locationList }) => {
-  console.log(locationList.weather);
+const DropDownMenu = ({
+  locationList,
+  getSelectedLocation,
+  selectedLocation
+}) => {
   const classes = useStyles();
-
   const handleChange = (event) => {
-    setAge(event.target.value);
+    getSelectedLocation(event.target.value);
   };
   return (
     <div className={classes.formControl}>
@@ -27,13 +30,13 @@ const DropDownMenu = ({ locationList }) => {
       <Select
         labelId='demo-simple-select-label'
         id='demo-simple-select'
-        value={location}
+        value={selectedLocation || ''}
         onChange={handleChange}
       >
         {locationList.weather.map((weather) => (
-          <div>
-            <MenuItem value={10}>{weather.location}</MenuItem>
-          </div>
+          <MenuItem key={weather.location} value={weather.location}>
+            {weather.location}
+          </MenuItem>
         ))}
       </Select>
     </div>
