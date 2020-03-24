@@ -6,10 +6,11 @@ import { getSelectedLocation } from '../../redux/modules/weather';
 
 class LocationContainer extends Component {
   PropTypes = {
-    locationList: PropTypes.array
+    getSelectedLocation: PropTypes.func,
+    locationList: PropTypes.array,
+    selectedLocation: PropTypes.string
   };
   render() {
-    console.log(this.props.getSelectedLocation);
     return (
       <div>
         <Location

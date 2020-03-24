@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import DropDownMenu from './components/dropDownMenu';
+import DropDownMenu from './components/DropDownMenu';
 
 function App() {
   return (
