@@ -1,3 +1,5 @@
+import weather from '../weather.js';
+
 // ACTIONS
 const GET_LOCATIONS = 'GET_LOCATIONS';
 const GET_SELECTED_LOCATION = 'GET_SELECTED_LOCATION';
@@ -12,9 +14,11 @@ export const getSelectedLocation = (selectedLocation) => ({
   payload: selectedLocation
 });
 
-export const getLocations = (locationList) => ({
+// const locationList = ({ config }) => ();
+
+export const getLocations = () => ({
   type: GET_LOCATIONS,
-  payload: locationList
+  payload: weather
 });
 
 // REDUCER
@@ -22,15 +26,7 @@ export const getLocations = (locationList) => ({
 export default (
   state = {
     selectedLocation: '',
-    locationList: [
-      'Creston',
-      'Dease Lake',
-      'Fort Nelson',
-      'Prince George',
-      'Revelstoke',
-      'Terrace',
-      'Whistler'
-    ]
+    locationList: weather
   },
   action
 ) => {

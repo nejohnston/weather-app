@@ -7,8 +7,8 @@ class LocationContainer extends Component {
   PropTypes = {
     locationList: PropTypes.array
   };
+  componentWillMount() {}
   render() {
-    // const { locationList } = this.props.data;
     return (
       <div>
         <Location locationList={this.props.locationList} />
