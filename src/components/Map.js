@@ -32,6 +32,10 @@ class MapContainer extends Component {
             lng: selectedLocation.lng
           }}
         >
+          {/* Took a shortcut here, initially had a mapping function mapping all the 
+          locations as markers but you can only have an info window if there's only 
+          one marker so I removed the mapping function and now have just (n)one 
+          marker on the map at a time */}
           <Marker
             name={selectedLocation.location}
             position={{
