@@ -7,10 +7,13 @@ import Select from '@material-ui/core/Select';
 const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
-    minWidth: 240
+    color: '#fff'
   },
   selectEmpty: {
     marginTop: theme.spacing(2)
+  },
+  select: {
+    width: '100%'
   }
 }));
 
@@ -27,6 +30,7 @@ const DropDownMenu = ({
     <div className={classes.formControl}>
       <InputLabel id='demo-simple-select-label'>Choose Location:</InputLabel>
       <Select
+        className={classes.select}
         labelId='demo-simple-select-label'
         id='demo-simple-select'
         value={selectedLocation || ''}

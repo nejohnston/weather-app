@@ -16,15 +16,13 @@ const Location = ({ locationList, getSelectedLocation, selectedLocation }) => {
         getSelectedLocation={getSelectedLocation}
         selectedLocation={selectedLocation}
       />
-      {selectedLocation !== '' && (
-        <div className={classes.map}>
-          <MapContainer
-            locationList={locationList}
-            getSelectedLocation={getSelectedLocation}
-            selectedLocation={selectedLocation}
-          />
-        </div>
-      )}
+      <div className={classes.map}>
+        <MapContainer
+          locationList={locationList}
+          getSelectedLocation={getSelectedLocation}
+          selectedLocation={selectedLocation}
+        />
+      </div>
     </div>
   );
 };

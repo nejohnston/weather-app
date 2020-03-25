@@ -11,8 +11,8 @@ export default {
     {
       id: 2,
       location: 'Dease Lake',
-      lat: '58.4374',
-      lng: '-129.9994',
+      lat: 58.4374,
+      lng: -129.9994,
       weatherURL:
         'https://weather.gc.ca/wxlink/wxlink.html?cityCode=bc-14&amp;lang=e'
     },
