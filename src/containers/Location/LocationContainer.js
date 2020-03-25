@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MapContainer from '../../components/Map';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Location from './Location';

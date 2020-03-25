@@ -1,13 +1,13 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardHeader, CardMedia } from '@material-ui/core';
-
 import moment from 'moment';
 
 const useStyles = makeStyles((theme) => ({
   itemCardWrapper: {
-    padding: '1%',
-    width: '100%'
+    display: 'flex',
+    flexDirection: 'row',
+    padding: '1%'
   },
   iframe: {
     padding: 16
@@ -30,11 +30,6 @@ const LocationCard = ({ selectedLocation }) => {
             height='163.45'
           />
         </CardMedia>
-        {/* <CardTitle
-    title={item.title}
-    subtitle={item.tags.map((i) => i.title).join(', ')}
-  />{' '}
-  <CardText>{item.description}</CardText> */}
       </Card>
     </div>
   );
