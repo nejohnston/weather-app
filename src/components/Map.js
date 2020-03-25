@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
-import LocationCard from './LocationCard';
 
 const mapStyles = {
   width: '100%',
