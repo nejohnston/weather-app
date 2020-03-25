@@ -8,7 +8,7 @@ class LocationContainer extends Component {
   PropTypes = {
     getSelectedLocation: PropTypes.func,
     locationList: PropTypes.array,
-    selectedLocation: PropTypes.string
+    selectedLocation: PropTypes.object
   };
   render() {
     return (

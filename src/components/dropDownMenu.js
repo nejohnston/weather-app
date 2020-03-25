@@ -21,9 +21,18 @@ const DropDownMenu = ({
   selectedLocation
 }) => {
   const classes = useStyles();
+  // const getIndex = (selectedLocation, i) => {
+  //   return;
+  //   locationList.findIndex(selectedLocation);
+  // };
   const handleChange = (event) => {
     getSelectedLocation(event.target.value);
   };
+  // const parse = JSON.parse(locationList);
+  // var index = .find(function(item, i) {
+  //   return item.name === selectedLocation;
+  // });
+  // console.log(parse);
   return (
     <div className={classes.formControl}>
       <InputLabel id='demo-simple-select-label'>Choose Location:</InputLabel>
@@ -34,7 +43,7 @@ const DropDownMenu = ({
         onChange={handleChange}
       >
         {locationList.weather.map((weather) => (
-          <MenuItem key={weather.location} value={weather.location}>
+          <MenuItem key={weather.id} value={weather}>
             {weather.location}
           </MenuItem>
         ))}

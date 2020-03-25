@@ -9,7 +9,7 @@ const Location = ({ locationList, getSelectedLocation, selectedLocation }) => (
       getSelectedLocation={getSelectedLocation}
       selectedLocation={selectedLocation}
     />
-    {selectedLocation !== '' && (
+    {selectedLocation.length !== 0 && (
       <LocationCard
         selectedLocation={selectedLocation}
         locationList={locationList}

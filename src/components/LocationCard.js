@@ -1,35 +1,43 @@
 import React from 'react';
-
-import {
-  Card,
-  CardActions,
-  CardHeader,
-  CardMedia,
-  CardTitle,
-  CardText
-} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import { Card, CardHeader, CardMedia } from '@material-ui/core';
 
 import moment from 'moment';
 
-// import './styles.css';
+const useStyles = makeStyles((theme) => ({
+  itemCardWrapper: {
+    padding: '1%',
+    width: '100%'
+  },
+  iframe: {
+    padding: 16
+  }
+}));
 
-const LocationCard = ({ selectedLocation }) => (
-  <div className='itemCardWrapper'>
-    <Card>
-      {/* <CardMedia>
-        <iframe src={item.imageurl} alt='image' />
-      </CardMedia> */}
-      <CardHeader
-        title={selectedLocation}
-        subtitle={moment(selectedLocation.created).fromNow()}
-      />
-      {/* <CardTitle
-        title={item.title}
-        subtitle={item.tags.map((i) => i.title).join(', ')}
-      />{' '}
-      <CardText>{item.description}</CardText> */}
-    </Card>
-  </div>
-);
+const LocationCard = ({ selectedLocation }) => {
+  const classes = useStyles();
+  return (
+    <div className={classes.itemCardWrapper}>
+      <Card>
+        <CardHeader
+          title={selectedLocation.location}
+          subtitle={moment(selectedLocation.created).fromNow()}
+        />
+        <CardMedia className={classes.iframe}>
+          <iframe
+            title='iframe'
+            src={selectedLocation.weatherURL}
+            height='163.45'
+          />
+        </CardMedia>
+        {/* <CardTitle
+    title={item.title}
+    subtitle={item.tags.map((i) => i.title).join(', ')}
+  />{' '}
+  <CardText>{item.description}</CardText> */}
+      </Card>
+    </div>
+  );
+};
 
 export default LocationCard;
