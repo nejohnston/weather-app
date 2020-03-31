@@ -3,6 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardHeader, CardMedia } from '@material-ui/core';
 import moment from 'moment';
 
+// This is a temporarily unused Component, was thinking it could
+// be used for a 'favorites' feature, for example if we want to
+// keep tabs on a certain location's weather
+
 const useStyles = makeStyles((theme) => ({
   itemCardWrapper: {
     display: 'flex',
